@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -30,7 +31,14 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding true
+        dataBinding true
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/skin-default/main/res', 'src/skin-default-red/main/res', 'src/skin-default-green/main/res']
+            java.srcDirs = ['src/main/java', 'src/skin-default/main/java', 'src/skin-default-red/main/java', 'src/skin-default-green/main/java']
+        }
     }
 }
 

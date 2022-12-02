@@ -1,17 +1,19 @@
 package com.example.daynightmode
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.daynightmode.databinding.FragmentFirstBinding
+import com.example.daynightmode.skin.AppThemeType
+import com.example.daynightmode.skin.AppThemeController
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class FirstFragment : BaseVMFragment<FirstViewModel>() {
 
     private var _binding: FragmentFirstBinding? = null
 
@@ -22,19 +24,30 @@ class FirstFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
+        createVm()
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.vm = mVm
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
+        binding.origin.setOnClickListener {
+            AppThemeController.changeSkin(AppThemeType.DEFAULT)
+        }
+        binding.red.setOnClickListener {
+            AppThemeController.changeSkin(AppThemeType.RED)
+        }
+        binding.green.setOnClickListener {
+            AppThemeController.changeSkin(AppThemeType.GREEN)
+        }
+
     }
 
     override fun onDestroyView() {

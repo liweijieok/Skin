@@ -25,6 +25,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "DayNightMode"
+rootProject.name = "skin"
 include ':app'
-include ':skin'

@@ -1,10 +1,10 @@
 package com.example.daynightmode
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.daynightmode.databinding.FragmentSecondBinding
 
@@ -25,6 +25,7 @@ class SecondFragment : Fragment() {
     ): View? {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
         return binding.root
 
     }
