@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="skin_red_color1">#f00</color>
-    <color name="skin_red_btn_textColor">#0a000f</color>
+    <color name="skin_red_text_color">#f00</color>
+    <color name="skin_red_btn_textColor">#ff34aa</color>
 </resources>

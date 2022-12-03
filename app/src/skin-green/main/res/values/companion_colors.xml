@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="skin_green_companion_text_color">#2200ff00</color>
+    <color name="skin_green_companion_btn_textColor">#00ffaa</color>
+</resources>

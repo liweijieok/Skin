@@ -36,8 +36,8 @@ android {
 
     sourceSets {
         main {
-            res.srcDirs = ['src/main/res', 'src/skin-default/main/res', 'src/skin-default-red/main/res', 'src/skin-default-green/main/res']
-            java.srcDirs = ['src/main/java', 'src/skin-default/main/java', 'src/skin-default-red/main/java', 'src/skin-default-green/main/java']
+            res.srcDirs = ['src/main/res', 'src/skin/main/res', 'src/skin-red/main/res', 'src/skin-green/main/res']
+            java.srcDirs = ['src/main/java', 'src/skin/main/java', 'src/skin-red/main/java', 'src/skin-green/main/java']
         }
     }
 }

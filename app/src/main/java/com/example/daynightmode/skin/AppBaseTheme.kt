@@ -15,19 +15,19 @@ abstract class AppBaseTheme {
     open val textColor = R.color.origin
 }
 
-abstract class AppBaseThemeOwner<T : AppBaseTheme> constructor() : IAppBaseTheme<T> {
+abstract class AppBaseThemeOwner<T : AppBaseTheme> : IAppBaseTheme<T> {
 
     /**
      * 获取主题
      * @return
      */
     fun getTheme(): T {
-        return if (AppThemeController.getSkinInterceptor().intercept()) companionTheme() else theme()
+        return if (AppThemeController.isShowCompanion) companionTheme() else theme()
     }
 
 }
 
-internal interface IAppBaseTheme<T : AppBaseTheme> {
+interface IAppBaseTheme<T : AppBaseTheme> {
     /**
      * 当前主题
      * @return

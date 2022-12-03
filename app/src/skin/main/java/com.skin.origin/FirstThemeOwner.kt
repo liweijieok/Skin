@@ -1,9 +1,8 @@
-package com.skin.default
+package com.skin.origin
 
 import com.example.daynightmode.R
 import com.example.daynightmode.skin.AppBaseTheme
 import com.example.daynightmode.skin.AppBaseThemeOwner
-import com.example.daynightmode.skin.ISkinInterceptor
 import com.example.daynightmode.util.ResUtil
 
 /**
@@ -15,7 +14,7 @@ import com.example.daynightmode.util.ResUtil
  * @desc:
  * @lastModify:
  */
-open class FirstThemeOwner() : AppBaseThemeOwner<FirstTheme>() {
+open class FirstThemeOwner : AppBaseThemeOwner<FirstTheme>() {
     override fun theme(): FirstTheme {
         return FirstTheme()
     }
@@ -26,9 +25,9 @@ open class FirstThemeOwner() : AppBaseThemeOwner<FirstTheme>() {
 }
 
 open class FirstTheme : AppBaseTheme() {
-    open val btnTextColor = ResUtil.getColor(R.color.white)
+    open val btnTextColor = ResUtil.getColor(R.color.skin_btn_text_color)
 }
 
 open class FirstThemeCompanionTheme : FirstTheme() {
-    override val btnTextColor = ResUtil.getColor(R.color.white)
+    override val btnTextColor = ResUtil.getColor(R.color.skin_companion_btn_text_color)
 }

@@ -1,10 +1,12 @@
 package com.example.daynightmode
 
+import RedFirstThemeOwner
 import com.example.daynightmode.skin.AppBaseThemeOwner
 import com.example.daynightmode.skin.AppThemeType
 import com.example.daynightmode.skin.BaseSkinModel
-import com.skin.default.FirstTheme
-import com.skin.default.FirstThemeOwner
+import com.skin.origin.FirstTheme
+import com.skin.origin.FirstThemeOwner
+import com.skin.green.GreenFirstThemeOwner
 
 /**
  * Project Name: SimplePermission
@@ -18,7 +20,9 @@ import com.skin.default.FirstThemeOwner
 class FirstViewModel : BaseSkinModel<FirstTheme>() {
     override fun getSkins(): Map<AppThemeType, Class<out AppBaseThemeOwner<FirstTheme>>> {
         return mapOf(
-            AppThemeType.DEFAULT to FirstThemeOwner::class.java
+            AppThemeType.DEFAULT to FirstThemeOwner::class.java,
+            AppThemeType.GREEN to GreenFirstThemeOwner::class.java,
+            AppThemeType.RED to RedFirstThemeOwner::class.java,
         )
     }
 }

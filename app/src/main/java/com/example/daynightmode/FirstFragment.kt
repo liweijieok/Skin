@@ -47,7 +47,21 @@ class FirstFragment : BaseVMFragment<FirstViewModel>() {
         binding.green.setOnClickListener {
             AppThemeController.changeSkin(AppThemeType.GREEN)
         }
+        binding.originTheme.text = themText()
+        binding.originTheme.setOnClickListener {
+            AppThemeController.changeCompanion()
+            binding.originTheme.text = themText()
+        }
 
+    }
+
+    private fun themText(): String {
+        val isShowCompanion = AppThemeController.isShowCompanion
+        return if (isShowCompanion) {
+            "当前为伴生：点击切换为默认"
+        } else {
+            "当前为默认：点击切换为伴生"
+        }
     }
 
     override fun onDestroyView() {

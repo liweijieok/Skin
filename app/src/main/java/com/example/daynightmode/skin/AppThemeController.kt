@@ -16,12 +16,7 @@ object AppThemeController {
     // 当前模式
     private var currentMode = AppThemeType.RED
 
-
-    fun getSkinInterceptor():ISkinInterceptor{
-        return ISkinInterceptor{
-            true
-        }
-    }
+    var isShowCompanion = false
 
     val globalTheme by lazy { MutableLiveData<GlobalTheme>() }
 
@@ -37,6 +32,14 @@ object AppThemeController {
     @Synchronized
     fun unregisterSkinChange(listener: ISkinChange) {
         mListener.remove(listener)
+    }
+
+    /**
+     * 切换伴生皮肤
+     */
+    fun changeCompanion() {
+        isShowCompanion = !isShowCompanion
+        changeSkin(currentMode)
     }
 
     @Synchronized

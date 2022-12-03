@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="default_">#f00</color>
+    <color name="skin_btn_text_color">#ff4533</color>
 </resources>
