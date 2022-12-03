@@ -7,7 +7,7 @@ import com.example.daynightmode.skin.BaseSkinModel
 import java.lang.reflect.ParameterizedType
 
 /**
- * Project Name: SimplePermission
+ * Project Name: Skin
  *
  * @author liweijie
  * @date : 2022/11/30 18:28

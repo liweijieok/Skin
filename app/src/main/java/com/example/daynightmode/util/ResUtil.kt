@@ -7,7 +7,7 @@ import android.os.Build
 import androidx.annotation.ColorRes
 
 /**
- * Project Name: SimplePermission
+ * Project Name: Skin
  *
  * @author liweijie
  * @date : 2022/11/30 18:17

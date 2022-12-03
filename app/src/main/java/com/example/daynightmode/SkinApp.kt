@@ -4,7 +4,7 @@ import android.app.Application
 import com.example.daynightmode.util.ResUtil
 
 /**
- * Project Name: SimplePermission
+ * Project Name: Skin
  *
  * @author liweijie
  * @date : 2022/11/30 18:22

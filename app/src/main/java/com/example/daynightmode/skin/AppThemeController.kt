@@ -3,7 +3,7 @@ package com.example.daynightmode.skin
 import androidx.lifecycle.MutableLiveData
 
 /**
- * Project Name: SimplePermission
+ * Project Name: Skin
  *
  * @author liweijie
  * @date : 2022/11/30 17:19

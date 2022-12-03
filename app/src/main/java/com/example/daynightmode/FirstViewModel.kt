@@ -9,7 +9,7 @@ import com.skin.origin.FirstThemeOwner
 import com.skin.green.GreenFirstThemeOwner
 
 /**
- * Project Name: SimplePermission
+ * Project Name: Skin
  *
  * @author liweijie
  * @date : 2022/11/30 17:16
