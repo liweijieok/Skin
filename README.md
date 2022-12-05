@@ -180,9 +180,9 @@ class FirstViewModel : BaseSkinModel<FirstTheme>() {
 
     override fun getSkins(): Map<AppThemeType, Class<out FirstTheme>> {
         return mapOf(
-            AppThemeType.DEFAULT to FirstTheme::class.java,
-            AppThemeType.RED to RedFirstTheme::class.java,
-            AppThemeType.GREEN to GreenFirstTheme::class.java
+            AppThemeType.DEFAULT to FirstThemeOwner::class.java,
+            AppThemeType.GREEN to GreenFirstThemeOwner::class.java,
+            AppThemeType.RED to RedFirstThemeOwner::class.java,
         )
     }
 
